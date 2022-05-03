@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: site-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      labels:
+        component: web
+    spec:
+      containers:
+        - name: site
+          image: mariogalaviz/taconlavanda-site-test
+          ports:
+          - containerPort: 3004

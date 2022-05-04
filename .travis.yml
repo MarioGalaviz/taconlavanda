@@ -15,7 +15,7 @@ before_install:
   - gcloud config set compute/zone us-west2-b
   - gcloud container clusters get-credentials cafeel-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t mariogalaviz/taconlavanda-site-test -f ./client/Dockerfile.dev ./client
+  - docker build -t mariogalaviz/taconlavanda-site-test -f ./site/Dockerfile.dev ./site
 script:
   - docker run -e CI=true mariogalaviz/taconlavanda-site-test npm test
 deploy:

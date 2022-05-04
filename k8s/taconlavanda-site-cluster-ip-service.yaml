@@ -8,4 +8,4 @@ spec:
     - port: 3004
       targetPort: 3004
   selector:
-    component: web
+    component: taconlavanda-site

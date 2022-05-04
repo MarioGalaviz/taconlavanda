@@ -6,11 +6,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      component: web
+      component: taconlavanda-site
   template:
     metadata:
       labels:
-        component: web
+        component: taconlavanda-site
     spec:
       containers:
         - name: site

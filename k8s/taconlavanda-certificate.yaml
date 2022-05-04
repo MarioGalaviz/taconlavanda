@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: taconlavanda-com-tls
+spec:
+  secretName: taconlavanda-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: taconlavanda.com
+  dnsNames:
+    - taconlavanda.com
+    - www.taconlavanda.com
